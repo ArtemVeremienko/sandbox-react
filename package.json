@@ -1,0 +1,11 @@
+{
+  "name": "sandbox-react",
+  "version": "1.0.0",
+  "description": "Sandbox to play with React build tools",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Artem Veremienko <temaspsxxx@gmail.com>",
+  "license": "ISC"
+}
