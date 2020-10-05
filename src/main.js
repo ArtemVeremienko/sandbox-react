@@ -1,7 +1,8 @@
 class App {
-  run() {
-    const name = 'World'
+  run = (name = 'World') => {
     console.log(`hello ${name}`)
+  }
+  constructor() {
   }
 }
 
