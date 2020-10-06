@@ -8,6 +8,10 @@ module.exports = (env = {}) => {
   const isProd = mode === 'production'
   const isDev = mode === 'development'
 
+  const envMode = isProd ? 'production' : isDev && 'development'
+
+  process.env.NODE_ENV = envMode;
+
   const getStyleLoaders = () => {
     return [
       isProd ? MiniCssExtractPlugin.loader : 'style-loader',
@@ -34,7 +38,7 @@ module.exports = (env = {}) => {
   }
 
   return {
-    mode: isProd ? 'production' : isDev && 'development',
+    mode: envMode,
 
     output: {
       filename: isProd ? 'main-[hash:8].js' : undefined,

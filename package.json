@@ -4,17 +4,24 @@
   "description": "Sandbox to play with React build tools",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --env.mode=development",
     "build": "webpack --env.mode=production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Artem Veremienko <temaspsxxx@gmail.com>",
   "license": "ISC",
-  "browserslist": [
-    "last 1 chrome version",
-    "last 1 firefox version",
-    "last 1 safari version"
-  ],
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "devDependencies": {
     "@babel/cli": "^7.11.6",
     "@babel/core": "^7.11.6",
