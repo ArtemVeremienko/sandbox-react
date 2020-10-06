@@ -4,12 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sanbox React</title>
+  <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 
 <body>
+  <time>
+    Build at:
+    <%= htmlWebpackPlugin.options.buildTime %>
+  </time>
   <div id="root"></div>
-  <script src="dist/main.js"></script>
 </body>
 
 </html>
