@@ -47,7 +47,7 @@ module.exports = (env = {}) => {
     module: {
       rules: [
 
-        // Loadign fonts
+        // Loadign JavaScript
         {
           test: /\.js$/,
           exclude: /node_modules/,
