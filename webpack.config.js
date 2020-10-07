@@ -52,6 +52,23 @@ module.exports = (env = {}) => {
           test: /\.js$/,
           exclude: /node_modules/,
           loader: 'babel-loader',
+          options: {
+            "presets": [
+              [
+                "@babel/env",
+                {
+                  "debug": false,
+                  "corejs": 3,
+                  "useBuiltIns": "usage",
+                  "modules": false
+                }
+              ],
+              "@babel/react"
+            ],
+            "plugins": [
+              "@babel/proposal-class-properties"
+            ]
+          }
         },
 
         // Loading images 
